@@ -12,7 +12,7 @@ describe('Adds two numbers', () => {
         expect(calc.add(-1, -2)).toBe(-3);
     })
 
-    it('Adds two floating point decimals', () => {
+    it('Adds two floating point numbers', () => {
         expect(calc.add(0.1, 0.2)).toBeCloseTo(0.3)
     })
 
@@ -32,6 +32,26 @@ describe('Adds two numbers', () => {
 describe('Subtracts two numbers', () => {
     it('Subtracts two positive numbers', () => {
         expect(calc.subtract(10, 5)).toBe(5);
+    })
+
+    it('Subtracts negative numbers', () => {
+        expect(calc.subtract(-10, -5)).toBe(-5);
+    })
+
+    it('Subtracts two floating point numbers', () => {
+        expect(calc.subtract(0.3, 0.2)).toBeCloseTo(0.1)
+    })
+
+    it('Only one number provided: returns that number', () => {
+        expect(calc.subtract(5)).toBe(5);
+    })
+
+    it('No numbers provided: returns undefined', () => {
+        expect(calc.subtract()).toBeUndefined();
+    })
+
+    it('Null as one argument: returns undefined', () => {
+        expect(calc.subtract(null, 5)).toBeUndefined();
     })
 })
 

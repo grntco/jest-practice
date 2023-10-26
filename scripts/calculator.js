@@ -12,6 +12,17 @@ class Calculator {
 
         return a - b;
     }
+
+    divide(a, b) {
+        if (b === undefined) return a;
+        if (a === null || b === null) return undefined;
+
+        return a / b;
+    }
+
+    multiply(a, b) {
+        
+    }
 }
 
 export { Calculator };

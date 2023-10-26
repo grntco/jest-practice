@@ -34,7 +34,7 @@ describe('Subtracts two numbers', () => {
         expect(calc.subtract(10, 5)).toBe(5);
     })
 
-    it('Subtracts negative numbers', () => {
+    it('Subtracts two negative numbers', () => {
         expect(calc.subtract(-10, -5)).toBe(-5);
     })
 
@@ -52,6 +52,32 @@ describe('Subtracts two numbers', () => {
 
     it('Null as one argument: returns undefined', () => {
         expect(calc.subtract(null, 5)).toBeUndefined();
+    })
+})
+
+describe('Divides two numbers', () => {
+    it('Divides two positive numbers', () => {
+        expect(calc.divide(10, 5)).toBe(2);
+    })
+
+    it('Divides two negative numbers', () => {
+        expect(calc.divide(-10, -5)).toBe(2);
+    })
+
+    it('Divides two floating point numbers', () => {
+        expect(calc.divide(0.5, 0.2)).toBe(2.5)
+    })
+
+    it('Only one number provided: returns that number', () => {
+        expect(calc.divide(5)).toBe(5);
+    })
+
+    it('No numbers provided: returns undefined', () => {
+        expect(calc.divide()).toBeUndefined();
+    })
+
+    it('Null as one argument: returns undefined', () => {
+        expect(calc.divide(null, 5)).toBeUndefined();
     })
 })
 

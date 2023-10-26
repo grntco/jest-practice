@@ -1,6 +1,10 @@
 import { caesarCipher } from "../scripts/caesarCipher";
 
 describe('Converts a string into a Caesar Cipher', () => {
+
+    it('No offset: returns original string', () => {
+        expect(caesarCipher('apple')).toBe('apple');
+    })
     
     it('Shifts forward 3 letters characters in alphabet', () => {
         expect(caesarCipher('apple', 3)).toBe('dssoh');

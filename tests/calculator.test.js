@@ -81,3 +81,28 @@ describe('Divides two numbers', () => {
     })
 })
 
+describe('Multiply two numbers', () => {
+    it('Multiplies two positive numbers', () => {
+        expect(calc.multiply(10, 5)).toBe(50);
+    })
+
+    it('Multiplies two negative numbers', () => {
+        expect(calc.multiply(-10, -5)).toBe(50);
+    })
+
+    it('Mulitplies two floating point numbers', () => {
+        expect(calc.multiply(0.5, 0.2)).toBe(0.1)
+    })
+
+    it('Only one number provided: returns that number', () => {
+        expect(calc.multiply(5)).toBe(5);
+    })
+
+    it('No numbers provided: returns undefined', () => {
+        expect(calc.multiply()).toBeUndefined();
+    })
+
+    it('Null as one argument: returns undefined', () => {
+        expect(calc.multiply(null, 5)).toBeUndefined();
+    })
+})

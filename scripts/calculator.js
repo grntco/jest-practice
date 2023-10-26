@@ -21,7 +21,10 @@ class Calculator {
     }
 
     multiply(a, b) {
+        if (b == undefined) return a;
+        if (a === null || b === null) return undefined;
         
+        return a * b;
     }
 }
 
